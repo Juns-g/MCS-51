@@ -15,6 +15,7 @@ void main()
     pt = &add;               // pt 指向片外首地址
     *(pt + 0x7fff) = 0x82;
     // 控制字, 0x82 = 1000 0010, 设置A为输出方式，B为输入方式
+    // 如果是A入B出，就是0x28
     while (1)
     {
         port_data = *(pt + 0x7dff);
