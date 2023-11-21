@@ -4,6 +4,7 @@
 #include <reg51.h>
 #include <absacc.h>
 #define add XBYTE[0x0000] // 定义片外首地址
+// 下面三个不用记，会给
 // A 口地址 0x7cff
 // B 口地址 0x7dff
 // 控制字地址 0x7fff
