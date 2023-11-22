@@ -16,15 +16,12 @@ void main()
     TL1 = 0xfd;
     TR1 = 1; // 启动定时器 1
 
-    while (1)
-    {
-        while (!RI)
-            ; // 等待接收中断
-        RI = 0;
-        P1 = SBUF; // 在 P1 接受数据
-        SBUF = P1; // 将 P1 的值发送出去
-        while (!TI)
-            ; // 等待发送中断
-        TI = 0;
-    }
+    P1 = SBUF; // 在 P1 接受数据
+    while (!RI)
+        ; // 等待接收中断
+    RI = 0;
+    SBUF = P1; // 将 P1 的值发送出去
+    while (!TI)
+        ; // 等待发送中断
+    TI = 0;
 }
