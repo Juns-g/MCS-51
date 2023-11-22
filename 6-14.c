@@ -1,5 +1,5 @@
 // 单片机 6-14题 使用中断的形式
-#include <reg51.h>
+#include <regx51.h>
 unsigned int Flag = 0; // 方式转变的 flag
 void main()
 {
